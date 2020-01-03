@@ -5,6 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>반응형 레이아웃1</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #d1c4e9;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        width: 100%;
+        height: 150px;
+        background: #4527a0;
+      }
+      aside {
+        float: left;
+        width: 30%;
+        height: 700px;
+        background: #512da8;
+      }
+      section {
+        float: left;
+        width: 70%;
+        height: 700px;
+        background: #5e35b1;
+      }
+      footer {
+        clear: both;
+        width: 100%;
+        height: 150px;
+        background: #673ab7;
+      }
+
+      /* 화면너비 : 0 ~ 1200px */
+      @media (max-width: 1260px) {
+        #wrap {
+          width: 95%;
+        }
+      }
+
+      /* 화면너비 : 0 ~ 768px */
+      @media (max-width: 768px) {
+        #wrap {
+          width: 100%;
+        }
+      }
+
+      /* 화면너비 : 0 ~ 480px */
+      @media (max-width: 480px) {
+        #wrap {
+          width: 100%;
+        }
+        header {
+          height: 300px;
+        }
+        aside {
+          float: none;
+          width: 100%;
+        }
+        section{
+          float:none;
+          width: 100%;
+        }
+        fo
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <aside></aside>
+      <section></section>
+      <footer></footer>
+    </div>
+  </body>
 </html>
