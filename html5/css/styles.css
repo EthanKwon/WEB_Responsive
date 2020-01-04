@@ -1,9 +1,11 @@
 @import "reset.css";
 
 /* 레이아웃 세팅 */
+body {
+  background: url("../images/header_bg.jpg") repeat-x center top;
+}
 
 #header {
-  background: url("../images/header_bg.jpg") repeat-x center top;
 }
 
 #nav {
@@ -385,13 +387,47 @@
   }
   .header .header_title,
   .header .header_icon,
-  .title .btn {
+  .title .btn,
+  .column.col1 .col_tit,
+  .column.col1 .col_desc,
+  .menu li a i {
     display: none;
   }
 
   #cont_left {
     float: none;
     width: 100%;
+  }
+
+  .column.col1 {
+    padding: 0;
+    border-bottom: 0;
+  }
+  .column.col1 .menu ul {
+    overflow: hidden;
+  }
+  .column.col1 .menu li {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    border-right: 1px solid #dbdbdb;
+    box-sizing: border-box;
+  }
+  .column.col1 .menu li:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .column.col1 .menu li a {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .column.col1 .menu li a:hover {
+    box-shadow: none;
+    background: rgba(36, 130, 174, 0.3);
+  }
+  .column.col2 {
+    background: #fff;
   }
 
   #cont_center {
