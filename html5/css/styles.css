@@ -179,6 +179,26 @@
   margin-bottom: 4px;
 }
 
+.nav > div li a {
+  position: relative;
+}
+
+.nav > div li a::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  transition: all 0.2s ease-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #25aad0;
+}
+
+.nav > div li:hover a::after {
+  width: 100%;
+}
+
 /* media query */
 
 /* 화면 너비 : 0 ~ 1200px */
