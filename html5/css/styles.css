@@ -139,6 +139,7 @@
 .nav {
   overflow: hidden;
   padding: 25px 0;
+  display: none;
 }
 
 .nav > div {
@@ -241,5 +242,60 @@
   }
   .row {
     padding: 0 15px;
+  }
+  .title .btn {
+    right: 5px;
+  }
+}
+
+/* 화면 너비 : 0 ~ 1024px */
+@media (max-width: 1024px) {
+}
+
+/* 화면 너비 : 0 ~ 960px */
+@media (max-width: 960px) {
+  .nav > div,
+  .nav > div:last-child {
+    float: none;
+    width: 100%;
+  }
+  .nav > div li,
+  .nav > div:last-child li {
+    width: 33.3333%;
+  }
+  .nav > div ol {
+    margin-bottom: 10px;
+  }
+}
+
+/* 화면 너비 : 0 ~ 768px */
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+  }
+  .header .header_title,
+  .header .header_icon,
+  .title .btn {
+    display: none;
+  }
+}
+
+/* 화면 너비 : 0 ~ 600px */
+@media (max-width: 600px) {
+  .nav > div li,
+  .nav > div:last-child li {
+    width: 50%;
+  }
+}
+
+/* 화면 너비 : 0 ~ 480px */
+@media (max-width: 480px) {
+}
+
+/* 화면 너비 : 0 ~ 320px */
+@media (max-width: 320px) {
+  .nav > div li,
+  .nav > div:last-child li {
+    width: 100%;
   }
 }
