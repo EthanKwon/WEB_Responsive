@@ -2,6 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
     <meta name="author" content="Ethan Kwon (권오인)" />
     <meta name="description" content="반응형 사이트 따라하기" />
     <meta
@@ -316,13 +320,45 @@
                 ></a>
               </div>
               <!-- //게시판2 -->
+              <!-- 구직활동보고서 1월 5일 공부 시작 -->
             </article>
             <!-- //col2 -->
             <article class="column col3">
-              <h4 class="col_tit">Title</h4>
-              <p class="col_desc">이곳은 설명 부분입니다.</p>
-              <!--  -->
-              <!-- // -->
+              <h4 class="col_tit">Blog</h4>
+              <p class="col_desc">
+                해상도에 따라 이미지를 다르게 표현하는 방법입니다.
+              </p>
+              <!-- blog1 -->
+              <div class="blog1">
+                <h5 class="ir_su">image1</h5>
+                <figure>
+                  <img
+                    src="./images/blog3_@1.jpg"
+                    srcset="
+                      ./images/blog3_@1.jpg 1x,
+                      ./images/blog3_@2.jpg 2x,
+                      ./images/blog3_@3.jpg 3x
+                    "
+                    alt="normal image"
+                  />
+                  <caption>
+                    반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지
+                    글입니다. 반응형 웹 사이트 이미지 글입니다.
+                  </caption>
+                </figure>
+              </div>
+              <!-- //blog1 -->
+              <!-- blog2 -->
+              <div class="blog2 mt15">
+                <div class="img_retina">
+                  <h5>image2</h5>
+                </div>
+                <p>
+                  반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지
+                  글입니다. 반응형 웹 사이트 이미지 글입니다.
+                </p>
+              </div>
+              <!-- //blog2 -->
             </article>
             <!-- //col3 -->
           </section>

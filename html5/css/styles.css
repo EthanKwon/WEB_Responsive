@@ -408,6 +408,48 @@ body {
   font-size: 10px;
 }
 
+/* 구직활동보고서 1월 5일 공부 시작 */
+
+/* 블로그1 */
+
+.blog1 img {
+  width: 100%;
+}
+
+/* 블로그1 */
+
+.blog2 h5 {
+  color: #fff;
+  text-align: center;
+  padding: 30px 30px;
+  text-transform: uppercase;
+}
+
+.blog2 {
+  padding-top: 5px;
+}
+
+.blog2 .img_retina {
+  background-image: url("../images/blog4_@1.jpg");
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx) {
+  .blog2 .img_retina {
+    background-image: url("../images/blog4_@2.jpg");
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3),
+  only screen and (min-resolution: 3dppx) {
+  .blog2 .img_retina {
+    background-image: url("../images/blog4_@3.jpg");
+  }
+}
+
 /* media query */
 
 /* 화면 너비 : 0 ~ 1200px */
