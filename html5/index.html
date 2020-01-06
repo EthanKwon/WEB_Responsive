@@ -19,6 +19,8 @@
     <!-- style -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/lightgallery.css" />
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="icon/favicon.ico" />
@@ -320,7 +322,6 @@
                 ></a>
               </div>
               <!-- //게시판2 -->
-              <!-- 구직활동보고서 1월 5일 공부 시작 -->
             </article>
             <!-- //col2 -->
             <article class="column col3">
@@ -362,26 +363,102 @@
             </article>
             <!-- //col3 -->
           </section>
+
+          <!-- 구직활동보고서 1월 6일 공부 시작 -->
+
           <section id="cont_center">
             <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
             <article class="column col4">
-              <h4 class="col_tit">Title</h4>
-              <p class="col_desc">이곳은 설명 부분입니다.</p>
-              <!--  -->
-              <!-- // -->
+              <h4 class="col_tit">Slick Slider</h4>
+              <p class="col_desc">
+                slick.js를 이용한 이미지 슬라이드 효과입니다.
+              </p>
+              <!-- 이미지 슬라이드  -->
+              <div class="slider">
+                <div>
+                  <figure>
+                    <img src="./images/slider01.jpg" alt="이미지 1" />
+                    <figcaption>
+                      <em>Responsive Site1</em>
+                      <span
+                        >슬라이드 플러그인을 이용한 반응형 이미지 슬라이드
+                        입니다.</span
+                      >
+                    </figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <figure>
+                    <img src="./images/slider02.jpg" alt="이미지 2" />
+                    <figcaption>
+                      <em>Responsive Site2</em>
+                      <span
+                        >슬라이드 플러그인을 이용한 반응형 이미지 슬라이드
+                        입니다.</span
+                      >
+                    </figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <figure>
+                    <img src="./images/slider03.jpg" alt="이미지 3" />
+                    <figcaption>
+                      <em>Responsive Site3</em>
+                      <span
+                        >슬라이드 플러그인을 이용한 반응형 이미지 슬라이드
+                        입니다.</span
+                      >
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <!-- //이미지 슬라이드 -->
             </article>
             <!-- //col4 -->
             <article class="column col5">
-              <h4 class="col_tit">Title</h4>
-              <p class="col_desc">이곳은 설명 부분입니다.</p>
-              <!--  -->
-              <!-- // -->
+              <h4 class="col_tit">Blend Effect</h4>
+              <p class="col_desc">Background-blend-mode와 mix-blend-mode</p>
+              <!-- lightbox -->
+              <div class="lightbox square clearfix">
+                <a href="./images/light01_s.jpg"
+                  ><img src="./images/light01.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light02_s.jpg"
+                  ><img src="./images/light02.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light03_s.jpg"
+                  ><img src="./images/light03.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light04_s.jpg"
+                  ><img src="./images/light04.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light05_s.jpg"
+                  ><img src="./images/light05.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light06_s.jpg"
+                  ><img src="./images/light06.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light07_s.jpg"
+                  ><img src="./images/light07.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light08_s.jpg"
+                  ><img src="./images/light08.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light09_s.jpg"
+                  ><img src="./images/light09.jpg" alt="이미지"
+                /></a>
+                <a href="./images/light10_s.jpg"
+                  ><img src="./images/light10.jpg" alt="이미지"
+                /></a>
+              </div>
+              <!-- //lightbox -->
             </article>
             <!-- //col5 -->
             <article class="column col6">
               <h4 class="col_tit">Title</h4>
               <p class="col_desc">이곳은 설명 부분입니다.</p>
-              <!--  -->
+              <!-- -->
+
               <!-- // -->
             </article>
             <!-- //col6 -->
@@ -422,8 +499,30 @@
     <!-- footer -->
     <script src="./js/jquery.min_1.12.4.js"></script>
     <script src="./js/modernizr-custom.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/lightgallery.min.js"></script>
 
     <script>
+      //라이트 박스
+      $(".lightbox").lightGallery(); 
+
+      //이미지 슬라이더
+      $(".slider").slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              autoplay: false
+            }
+          }
+        ]
+      });
+
+      // sns공유하기
       //http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
       //http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
       //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}

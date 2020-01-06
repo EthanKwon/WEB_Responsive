@@ -150,6 +150,30 @@ table {
   line-height: 1.5;
 }
 
+/* 버튼 초기화 */
+button {
+  border: 0;
+}
+
+/* 반응형 이미지 */
+img {
+  width: 100%;
+}
+
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::before,
+.clearfix::after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+.clearfix::after {
+  clear: both;
+}
+
 /* IR 효과 */
 .ir_pm {
   display: block;

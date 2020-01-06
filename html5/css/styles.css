@@ -408,15 +408,13 @@ body {
   font-size: 10px;
 }
 
-/* 구직활동보고서 1월 5일 공부 시작 */
-
 /* 블로그1 */
 
 .blog1 img {
   width: 100%;
 }
 
-/* 블로그1 */
+/* 블로그2 */
 
 .blog2 h5 {
   color: #fff;
@@ -450,6 +448,131 @@ body {
   }
 }
 
+/* 구직활동보고서 1월 6일 공부 시작 */
+
+/* 이미지 슬라이드 */
+.slider figure {
+  position: relative;
+}
+
+.slider figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  text-align: right;
+}
+
+.slider figcaption em {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: "Abel", sans-serif;
+  opacity: 0;
+  transition: all 0.84s 0.2s ease;
+  transform: translateX(-50px);
+}
+.slider figcaption span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.84s ease;
+  transform: translateX(-50px);
+}
+
+.slider .slick-active figcaption em,
+.slider .slick-active figcaption span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider .slick-dots {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.slider .slick-dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.slider .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #5dbfeb;
+  border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {
+  background: #2b91c8;
+}
+
+.slider .slick-prev {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.slider .slick-prev::before {
+  content: "\f053";
+  color: #5dbfeb;
+  text-indent: 0;
+  position: absolute;
+  left: 9px;
+  top: 8px;
+}
+
+.slider .slick-next {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.slider .slick-next::before {
+  content: "\f054";
+  color: #5dbfeb;
+  text-indent: 0;
+  position: absolute;
+  right: 9px;
+  top: 8px;
+}
+
+/* 라이트 박스 */
+.square a {
+  float: left;
+  width: 19%;
+  margin: 0.5%;
+}
+.square a img {
+  width: 100%;
+}
+
 /* media query */
 
 /* 화면 너비 : 0 ~ 1200px */
@@ -467,10 +590,23 @@ body {
   #contents .container {
     border: 0;
   }
+
+  .square a {
+    width: 24%;
+  }
+  .square a:nth-child(5n) {
+    display: none;
+  }
 }
 
 /* 화면 너비 : 0 ~ 1024px */
 @media (max-width: 1024px) {
+  .square a {
+    width: 32.3333%;
+  }
+  .square a:nth-child(5) {
+    display: block;
+  }
 }
 
 /* 화면 너비 : 0 ~ 960px */
@@ -553,6 +689,16 @@ body {
     border-left: 0;
     border-top: 1px solid #dbdbdb;
   }
+
+  .slider figcaption {
+    padding: 10px;
+  }
+  .slider figcaption em {
+    font-size: 18px;
+  }
+}
+.slider figcaption span {
+  font-size: 14px;
 }
 
 /* 화면 너비 : 0 ~ 600px */
@@ -560,6 +706,13 @@ body {
   .nav > div li,
   .nav > div:last-child li {
     width: 50%;
+  }
+
+  .square a {
+    width: 49%;
+  }
+  .square a:last-child {
+    display: block;
   }
 }
 
@@ -572,5 +725,9 @@ body {
   .nav > div li,
   .nav > div:last-child li {
     width: 100%;
+  }
+  .square a {
+    width: 100%;
+    margin: 0.5% 0;
   }
 }
