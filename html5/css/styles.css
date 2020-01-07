@@ -637,6 +637,34 @@ body {
 
 /* 구직활동보고서 1월 7일 공부 시작 */
 
+/* 푸터 */
+
+.footer {
+  text-align: center;
+  padding: 30px 50px;
+}
+
+.footer li {
+  display: inline;
+  padding: 0 7px 0 10px;
+  white-space: nowrap;
+}
+
+.footer li:before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #dbdbdb;
+}
+
+.footer li:first-child:before {
+  width: 0;
+}
+
+.footer address {
+  padding-top: 10px;
+}
+
 /* media query */
 
 /* 화면 너비 : 0 ~ 1200px */
@@ -696,18 +724,22 @@ body {
     position: static;
     width: 100%;
     border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
     overflow: hidden;
+  }
+  #footer {
+    border-top: 0;
   }
 
   #cont_right .column {
     float: left;
     width: 33.333%;
     box-sizing: border-box;
+    border-bottom: 0;
   }
   #cont_right .column.col7,
   #cont_right .column.col8 {
     border-right: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
   }
 }
 
@@ -817,8 +849,12 @@ body {
     margin: 0.5% 0;
   }
 
+  #cont_right {
+    border-bottom: 0;
+  }
   #cont_right .column {
     width: 100%;
+    border-bottom: 1px solid #dbdbdb;
   }
   #cont_right .column.col7 {
     border-right: 0;
