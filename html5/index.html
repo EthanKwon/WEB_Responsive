@@ -363,7 +363,7 @@
             </article>
             <!-- //col3 -->
           </section>
-          
+
           <section id="cont_center">
             <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
             <article class="column col4">
@@ -483,7 +483,12 @@
                     <source src="./images/video.mp4" type="video/mp4">
                   </video> -->
               <div class="video">
-                <iframe src="https://www.youtube.com/embed/D1PvIWdJ8xo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe
+                  src="https://www.youtube.com/embed/D1PvIWdJ8xo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
               <!-- //비디오 -->
             </article>
@@ -496,11 +501,13 @@
             <h3 class="ir_su">반응형 사이트 오른쪽 컨텐츠</h3>
             <article class="column col7">
               <h4 class="col_tit">Effect1</h4>
-              <p class="col_desc">CSS의 transform을 이용한 마우스 오버 효과 입니다.</p>
+              <p class="col_desc">
+                CSS의 transform을 이용한 마우스 오버 효과 입니다.
+              </p>
               <!-- side1 -->
               <div class="side1">
                 <figure>
-                  <img src="./images//side1.jpg" alt="이미지1">
+                  <img src="./images//side1.jpg" alt="이미지1" />
                 </figure>
               </div>
               <!-- //side1 -->
@@ -508,11 +515,13 @@
             <!-- //col7 -->
             <article class="column col8">
               <h4 class="col_tit">Effect2</h4>
-              <p class="col_desc">CSS의 transform을 이용한 마우스 오버 효과 입니다.</p>
+              <p class="col_desc">
+                CSS의 transform을 이용한 마우스 오버 효과 입니다.
+              </p>
               <!-- side2 -->
               <div class="side2">
                 <figure>
-                  <img src="./images//side2.jpg" alt="이미지2">
+                  <img src="./images//side2.jpg" alt="이미지2" />
                 </figure>
               </div>
               <!-- //side1 -->
@@ -520,11 +529,13 @@
             <!-- //col8 -->
             <article class="column col9">
               <h4 class="col_tit">Effect3</h4>
-              <p class="col_desc">CSS의 transform을 이용한 마우스 오버 효과 입니다.</p>
+              <p class="col_desc">
+                CSS의 transform을 이용한 마우스 오버 효과 입니다.
+              </p>
               <!-- side1 -->
               <div class="side3">
                 <figure>
-                  <img src="./images//side3.jpg" alt="이미지3">
+                  <img src="./images//side3.jpg" alt="이미지3" />
                 </figure>
               </div>
               <!-- //side1 -->
@@ -556,15 +567,42 @@
         </div>
       </div>
     </footer>
-    <!-- footer -->
+    <!-- //footer -->
+
     <script src="./js/jquery.min_1.12.4.js"></script>
     <script src="./js/modernizr-custom.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/lightgallery.min.js"></script>
 
     <script>
+      //접기, 펄치기
+      $(".btn").click(function(e) {
+        e.preventDefault();
+        $(".btn").toggleClass("open");
+        $(".nav").slideToggle();
+
+        if($(".btn").hasClass("open")){
+          //open이 있을 떄
+          $(".btn").find("i").attr("class", "fa fa-angle-up");
+        } else {
+          //open이 없을 때
+          $(".btn").find("i").attr("class", "fa fa-angle-down");
+        }
+      });
+
+      $(window).resize(function(){
+        var wWidth = $(window).width();
+        if(wWidth > 768){
+          $(".nav").removeAttr("style");
+        }
+      })
+      
       //라이트 박스
-      $(".lightbox").lightGallery();
+      $(".lightbox").lightGallery({
+        autoplay: true,
+        pause: 3000,
+        progressBar: true
+      });
 
       //이미지 슬라이더
       $(".slider").slick({
