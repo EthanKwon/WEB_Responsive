@@ -448,8 +448,6 @@ body {
   }
 }
 
-/* 구직활동보고서 1월 6일 공부 시작 */
-
 /* 이미지 슬라이드 */
 .slider figure {
   position: relative;
@@ -637,6 +635,8 @@ body {
   height: 100%;
 }
 
+/* 구직활동보고서 1월 7일 공부 시작 */
+
 /* media query */
 
 /* 화면 너비 : 0 ~ 1200px */
@@ -696,6 +696,18 @@ body {
     position: static;
     width: 100%;
     border-top: 1px solid #dbdbdb;
+    overflow: hidden;
+  }
+
+  #cont_right .column {
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+  }
+  #cont_right .column.col7,
+  #cont_right .column.col8 {
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
   }
 }
 
@@ -778,6 +790,16 @@ body {
   .square a:last-child {
     display: block;
   }
+
+  #cont_right .column {
+    width: 50%;
+  }
+  #cont_right .column.col8 {
+    border-right: 0;
+  }
+  #cont_right .column.col9 {
+    display: none;
+  }
 }
 
 /* 화면 너비 : 0 ~ 480px */
@@ -793,5 +815,15 @@ body {
   .square a {
     width: 100%;
     margin: 0.5% 0;
+  }
+
+  #cont_right .column {
+    width: 100%;
+  }
+  #cont_right .column.col7 {
+    border-right: 0;
+  }
+  #cont_right .column.col9 {
+    display: block;
   }
 }
